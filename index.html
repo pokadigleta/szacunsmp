@@ -1,56 +1,82 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>SZACUN SMP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>SZACUN SMP – Oficjalny Serwer Minecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- MENU -->
+<nav class="menu">
+    <a href="#" class="tab active">Strona główna </a>
+    <a href="#" class="tab">Regulamin </a>
+    <a href="#" class="tab">Administracja </a>
+    <a href="#" class="tab">Mapa </a>
+    <a href="#" class="tab join">Jak dołączyć </a>
+    <a href="#" class="tab">Discord </a>
+    <a href="#" class="tab">Wsparcie </a>
+</nav>
+
+<!-- HEADER -->
 <header class="hero">
-  <h1>SZACUN SMP</h1>
-  <p id="server-status">🔄 Sprawdzanie statusu...</p>
+    <h1>SZACUN SMP</h1>
+    <p>Lifesteal • Społeczność • Klimat</p>
 </header>
 
-<!-- ZAKŁADKI -->
-<div class="tabs">
-  <button class="tab active" onclick="showTab('home')">Strona główna ✅</button>
-  <button class="tab" onclick="showTab('rules')">Regulamin 💚</button>
-  <button class="tab" onclick="showTab('admin')">Administracja 😎</button>
-  <button class="tab" onclick="showTab('map')">Mapa 🗺️</button>
-  <button class="tab" onclick="showTab('join')">Jak dołączyć 🚀</button>
-  <button class="tab" onclick="showTab('discord')">Discord 💜</button>
-  <button class="tab" onclick="showTab('support')">Wsparcie 🧡</button>
-</div>
+<!-- CONTENT -->
+<main class="container">
 
-<!-- SEKCJE -->
-<div class="content">
+    <section class="card">
+        <h2>O serwerze</h2>
+        <p>
+            <strong>SZACUN SMP</strong> to serwer Minecraft oparty na zasadach
+            lifesteal.
+        </p>
+    </section>
 
-<section id="home" class="tab-content active">
-  <h2>Witaj na SZACUN SMP</h2>
-  <p>Serwer SMP oparty na zasadach, klimacie i szacunku.</p>
-</section>
+    <section class="card grid">
+        <div class="info">
+            <span>IP</span>
+            szacun-smp.pl
+        </div>
+        <div class="info">
+            <span>Tryb</span>
+            Survival SMP
+        </div>
+        <div class="info">
+            <span>Wersja</span>
+            1.21.x
+        </div>
+        <div class="info">
+            <span>Status</span>
+            Online 24/7
+        </div>
+    </section>
 
-<section id="rules" class="tab-content">
-  <h2>Regulamin</h2>
-  <ol>
-    <li>Zakaz cheatów i exploitów</li>
-    <li>Szanuj graczy</li>
-    <li>Nakaz ciągłej gry</li>
-  </ol>
-</section>
+    <section class="card">
+        <h2>Zasady</h2>
+        <ul>
+            <li>Szacunek do graczy i administracji</li>
+            <li>Zakaz cheatów i exploitów</li>
+            <li>Zakaz griefingu bez zgody</li>
+            <li>Administracja ma decydujący głos</li>
+        </ul>
+    </section>
 
-<section id="admin" class="tab-content">
-  <h2>Administracja</h2>
-  <p>Właściciel: Admin</p>
-  <p>Moderatorzy: Mod1, Mod2</p>
-</section>
+    <section class="card center">
+        <h2>Jak dołączyć?</h2>
+        <p>Dodaj serwer w Minecraft i wejdź na:</p>
+        <div class="ip-box">szacun-smp.pl</div>
+    </section>
 
-<section id="map" class="tab-content">
-  <h2>Mapa</h2>
-  <p>Mapa dynmap: wkrótce</p>
-</section>
+</main>
 
-<section id="join" class="tab-content">
-  <h2>Jak dołączyć
+<!-- FOOTER -->
+<footer>
+    © 2025 SZACUN SMP • Wszystkie prawa zastrzeżone
+</footer>
+
+</body>
+</html>
