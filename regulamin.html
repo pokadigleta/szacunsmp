@@ -4,79 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regulamin - SZACUN SMP</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { background-color: #0b0c10; color: #c5c6c7; font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        header { text-align: center; padding-bottom: 30px; border-bottom: 2px solid #ff0000; margin-bottom: 30px; }
-        .small-logo { max-width: 120px; height: auto; margin-bottom: 10px; }
-        h1 { color: #66fcf1; text-transform: uppercase; letter-spacing: 3px; margin: 0; }
-        h2 { color: #ff0000; border-bottom: 1px solid #1f2833; padding-bottom: 10px; margin-top: 40px; text-transform: uppercase; }
-        
-        .rule-box { background: rgba(31, 40, 51, 0.5); padding: 20px; border-left: 4px solid #ff0000; border-radius: 5px; margin: 15px 0; }
-        .rule-box strong { color: #fff; display: block; margin-bottom: 5px; }
-        
-        .punishment { color: #ff4d4d; font-weight: bold; }
-        .special-punishment { 
-            border: 2px solid #ff0000; 
-            background: rgba(255, 0, 0, 0.1); 
-            padding: 20px; 
-            border-radius: 5px; 
-            margin-top: 20px;
-            box-shadow: inset 0 0 15px rgba(255, 0, 0, 0.2);
+        /* Styl inspirowany przesłanym obrazkiem */
+        .header-line {
+            border-left: 4px solid #ff0000;
+            padding-left: 15px;
+            margin-bottom: 30px;
         }
 
-        .btn-back { display: inline-block; background: transparent; color: #66fcf1; padding: 10px 20px; text-decoration: none; border: 2px solid #66fcf1; border-radius: 5px; margin-bottom: 20px; }
-        .btn-accept { display: inline-block; background: #ff0000; color: white; padding: 20px 40px; text-decoration: none; font-weight: bold; border-radius: 5px; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); transition: 0.3s; text-transform: uppercase; margin-top: 20px; }
-        .btn-accept:hover { transform: scale(1.05); background: #cc0000; box-shadow: 0 0 30px rgba(255, 0, 0, 0.6); }
-        
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #45a29e; opacity: 0.7; }
+        .header-line h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #66fcf1;
+            text-align: left;
+        }
+
+        .rule-box {
+            background: #0b0c10;
+            border: 2px solid #45a29e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        /* Akcenty kolorystyczne na bokach boksów jak na screenie */
+        .box-red { border-left: 8px solid #ff0000; }
+        .box-blue { border-left: 8px solid #007bff; }
+        .box-purple { border-left: 8px solid #6f42c1; }
+        .box-cyan { border-left: 8px solid #66fcf1; }
+
+        .rule-box h3 {
+            color: #66fcf1;
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        .rule-box p {
+            color: #c5c6c7;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .special-note {
+            color: #ff0000;
+            font-weight: bold;
+            margin-top: 15px;
+            border-top: 1px solid rgba(255,0,0,0.2);
+            padding-top: 10px;
+        }
     </style>
 </head>
 <body>
+
 <div class="container">
     <header>
-        <a href="index.html" class="btn-back">← POWRÓT</a>
-        <br>
-        <img src="2.png" alt="Logo" class="small-logo">
-        <h1>KODEKS KRWI: <span style="color:#ff0000">SZACUN SMP</span></h1>
+        <a href="index.html" class="btn-back">← POWRÓT DO BRAM</a>
+        <br><br>
+        <span class="small-logo-text">SZACUN SMP</span>
     </header>
 
-    <section>
-        <h2>I. PAKIET PRZETRWANIA</h2>
-        <div class="rule-box"><strong>Cyrograf:</strong> Wchodząc na serwer, akceptujesz, że serca są jedyną walutą, a ten kodeks – jedynym prawem.</div>
-        <div class="rule-box"><strong>Brak Wymówek:</strong> Nieznajomość zasad nie uchroni Cię przed banicją.</div>
-        <div class="rule-box"><strong>Wola Rady:</strong> Rada Starszych może zmienić zasady w każdej chwili. Adaptuj się albo giń.</div>
-    </section>
+    <div class="section">
+        <div class="header-line">
+            <h1>KODEKS KRWI (REGULAMIN)</h1>
+        </div>
+        <p style="margin-bottom: 25px;">Nieznajomość poniższych praw nie zwalnia z ich przestrzegania. Wkraczasz do świata, gdzie każde słowo ma znaczenie.</p>
 
-    <section>
-        <h2>II. TERMINOLOGIA WOJENNA</h2>
-        <div class="rule-box"><strong>Wspomagacze (Cheaty):</strong> Zakazane pod groźbą wiecznego potępienia.</div>
-        <div class="rule-box"><strong>Destrukcja (Grief):</strong> Niszczenie baz jest dozwolone – buduj tak, byś umiał to obronić.</div>
-        <div class="rule-box"><strong>Lifesteal:</strong> Jesteś łowcą albo ofiarą. Wyrywasz serca, by rosnąć w siłę.</div>
-    </section>
+        <div class="rule-box box-cyan">
+            <h3>I. Postanowienia Ogólne</h3>
+            <p>Wchodząc na serwer, akceptujesz zasady Lifesteal. Twoje serca są Twoim życiem – tracąc wszystkie, zostajesz wyeliminowany, chyba że zostaniesz wskrzeszony przez sojuszników.</p>
+        </div>
 
-    <section>
-        <h2>V. WYROKI</h2>
-        <div class="rule-box">
-            <p><span class="punishment">1. Ostrzeżenie</span> – Ostatni dzwonek, byś zaczął grać z szacunkiem.</p>
-            <p><span class="punishment">2. Loch / Kaganiec</span> – Twoja wolność lub głos zostają odebrane.</p>
-            <p><span class="punishment">3. Wygnanie</span> – Wylatujesz z serwera, by przemyśleć błędy.</p>
-            <p><span class="punishment">4. Egzekucja (Perm)</span> – Twoja dusza zostaje wymazana na zawsze.</p>
+        <div class="rule-box box-blue">
+            <h3>II. Zakazy Bezwzględne</h3>
+            <p>Używanie cheatów, modyfikacji dających przewagę (X-Ray, KillAura, Fly), wykorzystywanie błędów gry oraz reklamowanie innych serwerów skutkuje natychmiastową banicją bez możliwości apelacji.</p>
+        </div>
+
+        <div class="rule-box box-red">
+            <h3>III. Wojna i Grabież</h3>
+            <p>Griefowanie baz, kradzieże oraz PvP są dozwolone i stanowią fundament rozgrywki. Administracja nie oddaje przedmiotów straconych w wyniku najazdu lub walki.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="header-line">
+            <h1>WYROKI I KARY</h1>
+        </div>
+
+        <div class="rule-box box-purple">
+            <h3>IV. Hierarchia Kar</h3>
+            <p>1. <strong>Ostrzeżenie:</strong> Żółta karta za mniejsze przewinienia.<br>
+            2. <strong>Wyciszenie (Mute):</strong> Za toksyczność lub spam na czacie.<br>
+            3. <strong>Więzienie:</strong> Czasowe unieruchomienie gracza.<br>
+            4. <strong>Wygnanie (Ban):</strong> Czasowe lub stałe usunięcie z królestwa.</p>
             
-            <div class="special-punishment">
-                <strong style="color: #ff0000; font-size: 1.2rem;">5. Gniew Władcy Cieni</strong>
-                <p style="margin-top: 5px;">Gdy do akcji musi wkroczyć sam Właściciel, nie oczekuj litości. To koniec Twojej drogi tutaj, bez prawa do apelacji i bez drugiej szansy.</p>
+            <div class="special-note">
+                V. GNIEW WŁADCY CIENI: Poważne złamanie regulaminu lub działanie na szkodę serwera przyciąga uwagę Właścicieli. Wyrok jest wtedy ostateczny i niepodważalny.
             </div>
         </div>
-    </section>
+    </div>
 
-    <section style="text-align: center; padding: 40px 0;">
-        <h3 style="color: #ff0000;">CZY PODPISUJESZ CYROGRAF?</h3>
-        <p style="font-style: italic; color: #45a29e;">Klikając poniżej, potwierdzasz, że Kodeks Krwi stał się Twoim prawem.</p>
-        <a href="https://discord.gg/TWOJ-LINK" class="btn-accept">AKCEPTUJĘ KODEKS I WCHODZĘ</a>
-    </section>
+    <div class="section" style="text-align: center; border-bottom: none;">
+        <h3 style="color: #66fcf1;">CZY AKCEPTUJESZ WARUNKI?</h3>
+        <a href="https://discord.gg/TWOJ-LINK" class="btn-base btn-red" style="padding: 15px 50px; font-size: 1.1rem; margin-top: 20px;">PODPISZ CYROGRAF (DISCORD)</a>
+    </div>
 
-    <footer>&copy; 2025 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.</footer>
+    <footer>
+        &copy; 2025 SZACUN SMP. Prawa zastrzeżone dla drapieżników.
+    </footer>
 </div>
+
 </body>
 </html>
