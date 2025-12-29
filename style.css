@@ -1,74 +1,113 @@
-/* --- Drabina Strachu (Rangi) --- */
-.role {
-    background: var(--bg-accent);
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
+/* --- GŁÓWNE USTAWIENIA --- */
+body { 
+    background-color: #0b0c10; 
+    color: #c5c6c7; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6; 
+    margin: 0; 
 }
 
-.role:hover {
-    border-color: var(--blood-red);
-    transform: translateX(10px);
-    background: #252e38;
+.container { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 20px; 
 }
 
-.role-icon {
-    width: 45px;
-    height: 45px;
-    margin-right: 25px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-/* --- Przycisk (Główna Akcja) --- */
-.btn-join {
-    display: inline-block;
-    background: var(--blood-red);
-    color: white;
-    padding: 20px 40px;
-    text-decoration: none;
+/* --- LOGO JAKO NAPIS --- */
+.logo-text {
+    font-size: 3.5rem;
     font-weight: 900;
-    font-size: 1.2rem;
-    border-radius: 5px;
+    color: #66fcf1;
     text-transform: uppercase;
-    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
-    transition: all 0.4s ease;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+    display: block;
+    text-shadow: 0 0 15px rgba(102, 252, 241, 0.5);
+}
+
+.small-logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #66fcf1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --- NAGŁÓWEK --- */
+header { 
+    text-align: center; 
+    padding: 40px 0; 
+    border-bottom: 2px solid #45a29e; 
+}
+
+/* --- PRZYCISKI --- */
+.btn-group { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+    margin-top: 30px; 
+}
+
+.btn-base { 
+    display: inline-block; 
+    color: white; 
+    padding: 10px 18px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 0.85rem; 
+    border-radius: 4px; 
+    transition: all 0.3s ease; 
     text-align: center;
-    min-width: 200px;
+    text-transform: uppercase;
+    min-width: 110px;
 }
 
-.btn-join:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.6);
+.btn-red { background-color: #ff0000; border: 1px solid #b30000; }
+.btn-blue { background-color: #007bff; border: 1px solid #0056b3; }
+
+.btn-base:hover { 
+    transform: translateY(-2px); 
+    filter: brightness(1.2); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
 }
 
-/* --- Sekcja przycisków (Flexbox) --- */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 40px;
+.btn-back { 
+    display: inline-block; 
+    color: #66fcf1; 
+    padding: 8px 20px; 
+    text-decoration: none; 
+    border: 2px solid #66fcf1; 
+    border-radius: 4px; 
+    margin-bottom: 20px; 
+    font-weight: bold; 
 }
 
-/* --- RWD (Dostosowanie do telefonów) --- */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-        letter-spacing: 4px;
-    }
-    
-    .button-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn-join {
-        width: 100%;
-        max-width: 300px;
-    }
+/* --- SEKCJE --- */
+.section { 
+    padding: 40px 0; 
+    border-bottom: 1px solid #1f2833; 
 }
+
+h1 { color: #66fcf1; text-transform: uppercase; letter-spacing: 5px; }
+h2 { color: #66fcf1; border-left: 5px solid #ff0000; padding-left: 15px; text-transform: uppercase; }
+
+.blood { color: #ff0000; text-shadow: 0 0 5px rgba(255,0,0,0.5); }
+
+.highlight-box { 
+    background: rgba(31, 40, 51, 0.5); 
+    padding: 25px; 
+    border: 1px solid #45a29e; 
+    border-radius: 10px; 
+    margin-top: 20px; 
+}
+
+code { color: #ff0000; background: #1f2833; padding: 2px 5px; border-radius: 3px; font-weight: bold; }
+
+/* --- STAFF --- */
+.member-card { 
+    background: #1f2833; padding: 15px; margin: 10px 0; border-radius: 5px; 
+    display: flex; align-items: center; gap: 15px; border-left: 5px solid #ff000
