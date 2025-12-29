@@ -3,83 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SZACUN SMP - Krwawe Dziedzictwo</title>
+    <title>SZACUN SMP - Strona Główna</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { 
-            background-color: #0b0c10; 
-            color: #c5c6c7; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            margin: 0; 
-        }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        
-        header { 
-            text-align: center; 
-            padding: 40px 0; 
-            border-bottom: 2px solid #45a29e; 
+        /* Specyficzne style dla układu z obrazka */
+        .header-accent {
+            border-left: 4px solid #ff0000;
+            padding-left: 15px;
+            margin: 40px 0 20px 0;
         }
 
-        .logo { 
-            max-width: 280px; 
-            height: auto; 
-            margin-bottom: 20px; 
-            transition: transform 0.5s;
-        }
-        .logo:hover { transform: scale(1.05); }
-
-        /* PRZYCISKI - MAŁE I W JEDNEJ LINII */
-        .btn-group { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 10px; 
-            flex-wrap: wrap; 
-            margin-top: 30px; 
-        }
-        
-        .btn-base { 
-            display: inline-block; 
-            color: white; 
-            padding: 10px 18px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-size: 0.85rem; 
-            border-radius: 4px; 
-            transition: all 0.3s ease; 
-            text-align: center;
+        .header-accent h2 {
+            color: #66fcf1;
             text-transform: uppercase;
-            min-width: 110px;
-        }
-        
-        .btn-red { background-color: #ff0000; border: 1px solid #b30000; }
-        .btn-blue { background-color: #007bff; border: 1px solid #0056b3; }
-        
-        .btn-base:hover { 
-            transform: translateY(-2px); 
-            filter: brightness(1.2); 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+            font-size: 1.8rem;
+            margin: 0;
+            border: none; /* Nadpisujemy standardowe h2 */
+            padding: 0;
         }
 
-        .section { padding: 40px 0; border-bottom: 1px solid #1f2833; }
-        h2 { color: #66fcf1; border-left: 5px solid #ff0000; padding-left: 15px; text-transform: uppercase; letter-spacing: 1px; }
-
-        .highlight-box { 
-            background: rgba(31, 40, 51, 0.5); 
-            padding: 25px; 
-            border: 1px solid #45a29e; 
-            border-radius: 10px; 
-            margin-top: 20px; 
+        .content-box {
+            background: #0b0c10;
+            border: 1px solid #45a29e;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
         }
 
-        code { color: #ff0000; background: #1f2833; padding: 2px 5px; border-radius: 3px; font-weight: bold; }
-        
-        footer { 
-            text-align: center; 
-            padding: 40px; 
-            font-size: 0.8rem; 
-            color: #45a29e; 
-            opacity: 0.6; 
+        /* Kolorowe paski boczne dla boksów */
+        .border-red { border-left: 6px solid #ff0000; }
+        .border-cyan { border-left: 6px solid #66fcf1; }
+        .border-blue { border-left: 6px solid #007bff; }
+        .border-purple { border-left: 6px solid #6f42c1; }
+
+        .content-box h3 {
+            color: #66fcf1;
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+
+        .content-box p {
+            color: #c5c6c7;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .quote {
+            text-align: center;
+            font-style: italic;
+            color: #ff0000;
+            margin-top: 30px;
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -87,63 +64,59 @@
 
 <div class="container">
     <header>
-        <img src="2.png" alt="SZACUN SMP Logo" class="logo">
-        <p>W świecie rządzonym przez głód potęgi, tylko najsilniejsi piszą historię.</p>
-        
+        <span class="logo-text">SZACUN SMP</span>
         <div class="btn-group">
             <a href="staff.html" class="btn-base btn-red">STAFF</a>
-            <a href="https://discord.gg/TWOJ-LINK" class="btn-base btn-blue">DOŁĄCZ DO RZEZI</a>
+            <a href="https://discord.gg/TWOJ-LINK" class="btn-base btn-blue">DISCORD</a>
             <a href="regulamin.html" class="btn-base btn-blue">REGULAMIN</a>
-            <a href="http://5.252.100.184:25403" class="btn-base btn-red" target="_blank">MAPA SERWERA</a>
+            <a href="http://5.252.100.184:25403" class="btn-base btn-red" target="_blank">MAPA</a>
         </div>
     </header>
 
-    <div class="section">
+    <div class="header-accent">
         <h2>Architektura Przetrwania</h2>
-        <p>Lifesteal na <strong>SZACUN SMP</strong> to nie tylko gra – to brutalna selekcja naturalna. Każde zabójstwo buduje Twoją potęgę, a każdy zgon spycha Cię w niebyt.</p>
+    </div>
+    <p>Lifesteal na <strong>SZACUN SMP</strong> to nie tylko gra – to brutalna selekcja naturalna. Każde zabójstwo buduje Twoją potęgę, a każdy zgon spycha Cię w niebyt.</p>
 
-        <div class="highlight-box" style="border-left: 5px solid #ff0000; background: rgba(0,0,0,0.3);">
-            <h3 style="color: #66fcf1; margin-top: 0; text-transform: uppercase;">Poziom I: Drapieżnik</h3>
-            <p>Tutaj krew jest jedyną stabilną walutą. Każde zdobyte serce to kolejny stopień na drodze do dominacji. Wyrywasz cząstkę istnienia swoim wrogom, by karmić własną potęgę. Nie ma miejsca na litość – jest tylko wieczny głód i walka o każdy oddech.</p>
-        </div>
-
-        <div class="highlight-box" style="border-left: 5px solid #007bff; margin-top: 15px;">
-            <h3 style="color: #66fcf1; margin-top: 0; text-transform: uppercase;">Poziom II: Strateg</h3>
-            <p>W świecie kruchych sojuszy i wszechobecnej zdrady, miecz to za mało. Musisz budować fortece, które wytrzymają oblężenia, i zawierać pakty, które zerwiesz pierwszy. Rozwijaj swoje wpływy, zanim zostaniesz tylko statystyką w bilansie zgonów.</p>
-        </div>
-
-        <div class="highlight-box" style="border-left: 5px solid #6f42c1; margin-top: 15px;">
-            <h3 style="color: #66fcf1; margin-top: 0; text-transform: uppercase;">Poziom III: Legenda</h3>
-            <p>Tylko nieliczni osiągają ten pułap. To etap, gdzie Twoje imię budzi strach na czacie, a Twoja obecność zmienia losy bitew. Na tym poziomie nie walczysz już o serca – walczysz o to, by świat zapamiętał Twoje panowanie.</p>
-        </div>
+    <div class="content-box border-red">
+        <h3>Poziom I: Drapieżnik</h3>
+        <p>Tutaj krew jest jedyną stabilną walutą. Każde zdobyte serce to kolejny stopień na drodze do dominacji. Wyrywasz cząstkę istnienia swoim wrogom, by karmić własną potęgę. Nie ma miejsca na litość – jest tylko wieczny głód i walka o każdy oddech.</p>
     </div>
 
-    <div class="section">
+    <div class="content-box border-cyan">
+        <h3>Poziom II: Strateg</h3>
+        <p>W świecie kruchych sojuszy i wszechobecnej zdrady, miecz to za mało. Musisz budować fortece, które wytrzymają oblężenia, i zawierać pakty, które zerwiesz pierwszy. Rozwijaj swoje wpływy, zanim zostaniesz tylko statystyką w bilansie zgonów.</p>
+    </div>
+
+    <div class="content-box border-blue">
+        <h3>Poziom III: Legenda</h3>
+        <p>Tylko nieliczni osiągają ten pułap. To etap, gdzie Twoje imię budzi strach na czacie, a Twoja obecność zmienia losy bitew. Na tym poziomie nie walczysz już o serca – walczysz o to, by świat zapamiętał Twoje panowanie.</p>
+    </div>
+
+    <div class="header-accent">
         <h2>Droga ku Przeznaczeniu (Whitelist)</h2>
-        <p>Bramy <strong>SZACUN SMP</strong> nie stoją otworem dla każdego. Tylko ci, którzy udowodnią swoją wartość, zostaną dopuszczeni przed oblicze Rady. Twój proces inicjacji dzieli się na trzy fazy:</p>
-        
-        <div class="highlight-box" style="border-right: 4px solid #45a29e;">
-            <h3 style="color: #66fcf1; margin-top: 0;">ETAP I: Przebudzenie Świadomości</h3>
-            <p>Twoja podróż zaczyna się od wiedzy. Musisz zgłębić <code>#🩸┇kodeks-krwi</code> na naszym Discordzie. Nieznajomość prawa na SZACUN SMP jest pierwszym krokiem ku wiecznej banicji.</p>
-        </div>
-
-        <div class="highlight-box" style="border-right: 4px solid #007bff; margin-top: 15px;">
-            <h3 style="color: #66fcf1; margin-top: 0;">ETAP II: Próba Filarów</h3>
-            <p>Gdy poczujesz gotowość, otwórz podanie w kategorii <code>FILARY SZACUNU</code>. To tutaj staniesz przed botem-egzaminatorem. Twoje odpowiedzi muszą być przemyślane – każde słowo jest analizowane.</p>
-        </div>
-
-        <div class="highlight-box" style="border-right: 4px solid #ff0000; margin-top: 15px;">
-            <h3 style="color: #66fcf1; margin-top: 0;">ETAP III: Wyrok Strażnika</h3>
-            <p>Ostateczny głos należy do <strong>Strażnika Kodeksu</strong>. Twoja historia i czyny zostaną poddane surowej ocenie. Czekaj na werdykt: Dopuszczenie lub Wieczne Wygnanie.</p>
-        </div>
-
-        <p style="text-align: center; margin-top: 25px; font-style: italic; color: #ff0000;">
-            "Wielu puka do bram, lecz tylko nieliczni przechodzą przez próg."
-        </p>
     </div>
+    <p>Bramy <strong>SZACUN SMP</strong> nie stoją otworem dla każdego. Tylko ci, którzy udowodnią swoją wartość, zostaną dopuszczeni przed oblicze Rady. Twój proces inicjacji dzieli się na trzy fazy:</p>
+
+    <div class="content-box border-blue">
+        <h3>ETAP I: Przebudzenie Świadomości</h3>
+        <p>Twoja podróż zaczyna się od wiedzy. Musisz zgłębić <code>#🩸┇kodeks-krwi</code> na naszym Discordzie. Nieznajomość prawa na SZACUN SMP jest pierwszym krokiem ku wiecznej banicji.</p>
+    </div>
+
+    <div class="content-box border-red">
+        <h3>ETAP II: Próba Filarów</h3>
+        <p>Gdy poczujesz gotowość, otwórz podanie w kategorii <strong>FILARY SZACUNU</strong>. To tutaj staniesz przed botem-egzaminatorem. Twoje odpowiedzi muszą być przemyślane – każde słowo jest analizowane.</p>
+    </div>
+
+    <div class="content-box border-purple">
+        <h3>ETAP III: Wyrok Strażnika</h3>
+        <p>Ostateczny głos należy do <strong>Strażnika Kodeksu</strong>. Twoja historia i czyny zostaną poddane surowej ocenie. Czekaj na werdykt: Dopuszczenie lub Wieczne Wygnanie.</p>
+    </div>
+
+    <p class="quote">"Wielu puka do bram, lecz tylko nieliczni przechodzą przez próg."</p>
 
     <footer>
-        &copy; 2025 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
+        &copy; 2025 SZACUN SMP. Wszystkie prawa zastrzeżone.
     </footer>
 </div>
 
