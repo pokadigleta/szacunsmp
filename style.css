@@ -1,4 +1,4 @@
-/* --- GŁÓWNE USTAWIENIA --- */
+/* --- FUNDAMENTY --- */
 body { 
     background-color: #0b0c10; 
     color: #c5c6c7; 
@@ -13,7 +13,7 @@ body {
     padding: 20px; 
 }
 
-/* --- LOGO JAKO NAPIS --- */
+/* --- LOGO TEKSTOWE --- */
 .logo-text {
     font-size: 3.5rem;
     font-weight: 900;
@@ -22,7 +22,7 @@ body {
     letter-spacing: 8px;
     margin-bottom: 10px;
     display: block;
-    text-shadow: 0 0 15px rgba(102, 252, 241, 0.5);
+    text-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
 }
 
 .small-logo-text {
@@ -35,14 +35,13 @@ body {
     margin-bottom: 10px;
 }
 
-/* --- NAGŁÓWEK --- */
+/* --- NAGŁÓWEK I NAWIGACJA --- */
 header { 
     text-align: center; 
     padding: 40px 0; 
     border-bottom: 2px solid #45a29e; 
 }
 
-/* --- PRZYCISKI --- */
 .btn-group { 
     display: flex; 
     justify-content: center; 
@@ -86,7 +85,7 @@ header {
     font-weight: bold; 
 }
 
-/* --- SEKCJE --- */
+/* --- TREŚĆ I HIERARCHIA --- */
 .section { 
     padding: 40px 0; 
     border-bottom: 1px solid #1f2833; 
@@ -107,7 +106,26 @@ h2 { color: #66fcf1; border-left: 5px solid #ff0000; padding-left: 15px; text-tr
 
 code { color: #ff0000; background: #1f2833; padding: 2px 5px; border-radius: 3px; font-weight: bold; }
 
-/* --- STAFF --- */
+/* --- STAFF CARDS --- */
 .member-card { 
-    background: #1f2833; padding: 15px; margin: 10px 0; border-radius: 5px; 
-    display: flex; align-items: center; gap: 15px; border-left: 5px solid #ff000
+    background: #1f2833; 
+    padding: 15px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    border-left: 5px solid #ff0000;
+}
+
+.role-icon { width: 35px; height: 35px; border-radius: 50%; flex-shrink: 0; }
+.info strong { font-size: 1.1rem; color: #fff; }
+.info p { margin: 3px 0 0; font-size: 0.85rem; color: #45a29e; }
+
+footer { 
+    text-align: center; 
+    padding: 40px; 
+    font-size: 0.8rem; 
+    color: #45a29e; 
+    opacity: 0.6; 
+}
