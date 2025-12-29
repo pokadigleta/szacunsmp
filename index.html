@@ -3,42 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SZACUN SMP - Strona Główna</title>
+    <title>SZACUN SMP - Krwawe Dziedzictwo</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Specyficzne style dla układu z obrazka */
+        /* Nadpisanie stylu dla uzyskania czerwonego podświetlenia */
+        .logo-text {
+            color: #ff0000 !important;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4) !important;
+        }
+
+        /* Styl czerwonych akcentów (kreski przy nagłówkach) */
         .header-accent {
-            border-left: 4px solid #ff0000;
+            border-left: 5px solid #ff0000;
             padding-left: 15px;
             margin: 40px 0 20px 0;
+            box-shadow: -10px 0 15px -10px rgba(255, 0, 0, 0.5);
         }
 
         .header-accent h2 {
-            color: #66fcf1;
+            color: #ffffff;
             text-transform: uppercase;
             font-size: 1.8rem;
             margin: 0;
-            border: none; /* Nadpisujemy standardowe h2 */
-            padding: 0;
         }
 
+        /* Wszystkie ramki bocznych boksów na czerwono */
         .content-box {
             background: #0b0c10;
-            border: 1px solid #45a29e;
-            border-radius: 8px;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 4px;
             padding: 25px;
             margin-bottom: 20px;
-            position: relative;
+            border-left: 6px solid #ff0000; /* Każda kreska na czerwono */
+            box-shadow: inset 5px 0 10px -5px rgba(255, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Kolorowe paski boczne dla boksów */
-        .border-red { border-left: 6px solid #ff0000; }
-        .border-cyan { border-left: 6px solid #66fcf1; }
-        .border-blue { border-left: 6px solid #007bff; }
-        .border-purple { border-left: 6px solid #6f42c1; }
+        .content-box:hover {
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
 
         .content-box h3 {
-            color: #66fcf1;
+            color: #ff0000;
             margin-top: 0;
             text-transform: uppercase;
             font-size: 1.3rem;
@@ -48,15 +56,19 @@
         .content-box p {
             color: #c5c6c7;
             line-height: 1.6;
-            margin-bottom: 0;
         }
 
         .quote {
             text-align: center;
             font-style: italic;
             color: #ff0000;
-            margin-top: 30px;
-            font-size: 1.1rem;
+            margin-top: 35px;
+            font-size: 1.2rem;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        strong {
+            color: #ff0000;
         }
     </style>
 </head>
@@ -67,7 +79,7 @@
         <span class="logo-text">SZACUN SMP</span>
         <div class="btn-group">
             <a href="staff.html" class="btn-base btn-red">STAFF</a>
-            <a href="https://discord.gg/H7v4BmM3ac" class="btn-base btn-blue">DOŁĄCZAM</a>
+            <a href="https://discord.com/invite/H7v4BmM3ac" class="btn-base btn-blue">DISCORD</a>
             <a href="regulamin.html" class="btn-base btn-blue">REGULAMIN</a>
             <a href="http://5.252.100.184:25403" class="btn-base btn-red" target="_blank">MAPA</a>
         </div>
@@ -78,17 +90,17 @@
     </div>
     <p>Lifesteal na <strong>SZACUN SMP</strong> to nie tylko gra – to brutalna selekcja naturalna. Każde zabójstwo buduje Twoją potęgę, a każdy zgon spycha Cię w niebyt.</p>
 
-    <div class="content-box border-red">
+    <div class="content-box">
         <h3>Poziom I: Drapieżnik</h3>
         <p>Tutaj krew jest jedyną stabilną walutą. Każde zdobyte serce to kolejny stopień na drodze do dominacji. Wyrywasz cząstkę istnienia swoim wrogom, by karmić własną potęgę. Nie ma miejsca na litość – jest tylko wieczny głód i walka o każdy oddech.</p>
     </div>
 
-    <div class="content-box border-cyan">
+    <div class="content-box">
         <h3>Poziom II: Strateg</h3>
         <p>W świecie kruchych sojuszy i wszechobecnej zdrady, miecz to za mało. Musisz budować fortece, które wytrzymają oblężenia, i zawierać pakty, które zerwiesz pierwszy. Rozwijaj swoje wpływy, zanim zostaniesz tylko statystyką w bilansie zgonów.</p>
     </div>
 
-    <div class="content-box border-blue">
+    <div class="content-box">
         <h3>Poziom III: Legenda</h3>
         <p>Tylko nieliczni osiągają ten pułap. To etap, gdzie Twoje imię budzi strach na czacie, a Twoja obecność zmienia losy bitew. Na tym poziomie nie walczysz już o serca – walczysz o to, by świat zapamiętał Twoje panowanie.</p>
     </div>
@@ -98,17 +110,17 @@
     </div>
     <p>Bramy <strong>SZACUN SMP</strong> nie stoją otworem dla każdego. Tylko ci, którzy udowodnią swoją wartość, zostaną dopuszczeni przed oblicze Rady. Twój proces inicjacji dzieli się na trzy fazy:</p>
 
-    <div class="content-box border-blue">
+    <div class="content-box">
         <h3>ETAP I: Przebudzenie Świadomości</h3>
         <p>Twoja podróż zaczyna się od wiedzy. Musisz zgłębić <code>#🩸┇kodeks-krwi</code> na naszym Discordzie. Nieznajomość prawa na SZACUN SMP jest pierwszym krokiem ku wiecznej banicji.</p>
     </div>
 
-    <div class="content-box border-red">
+    <div class="content-box">
         <h3>ETAP II: Próba Filarów</h3>
         <p>Gdy poczujesz gotowość, otwórz podanie w kategorii <strong>FILARY SZACUNU</strong>. To tutaj staniesz przed botem-egzaminatorem. Twoje odpowiedzi muszą być przemyślane – każde słowo jest analizowane.</p>
     </div>
 
-    <div class="content-box border-purple">
+    <div class="content-box">
         <h3>ETAP III: Wyrok Strażnika</h3>
         <p>Ostateczny głos należy do <strong>Strażnika Kodeksu</strong>. Twoja historia i czyny zostaną poddane surowej ocenie. Czekaj na werdykt: Dopuszczenie lub Wieczne Wygnanie.</p>
     </div>
@@ -116,7 +128,7 @@
     <p class="quote">"Wielu puka do bram, lecz tylko nieliczni przechodzą przez próg."</p>
 
     <footer>
-        &copy; 2025 SZACUN SMP. Wszystkie prawa zastrzeżone.
+        &copy; 2025 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
     </footer>
 </div>
 
