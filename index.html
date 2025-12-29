@@ -5,46 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SZACUN SMP - Krwawe Dziedzictwo</title>
     <style>
-        body { background-color: #0b0c10; color: #c5c6c7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; }
+        body { background-color: #0b0c10; color: #c5c6c7; font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { text-align: center; padding: 50px 0; border-bottom: 2px solid #45a29e; }
-        h1 { color: #66fcf1; font-size: 3rem; text-transform: uppercase; letter-spacing: 5px; margin: 0; }
-        .blood { color: #ff0000; }
+        header { text-align: center; padding: 60px 0; border-bottom: 2px solid #45a29e; }
+        h1 { color: #66fcf1; font-size: 3.5rem; text-transform: uppercase; letter-spacing: 8px; margin: 0; }
+        .blood { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
 
-        .section { padding: 40px 0; border-bottom: 1px solid #1f2833; }
-        h2 { color: #66fcf1; border-left: 5px solid #ff0000; padding-left: 15px; text-transform: uppercase; }
+        .section { padding: 50px 0; border-bottom: 1px solid #1f2833; }
+        h2 { color: #66fcf1; border-left: 5px solid #ff0000; padding-left: 15px; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* UKŁAD PRZYCISKÓW */
-        .btn-group { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 15px; 
-            flex-wrap: wrap; 
-            margin-top: 30px; 
-        }
-        
+        .btn-group { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-top: 40px; }
         .btn-base { 
             display: inline-block; 
             color: white; 
             padding: 15px 25px; 
             text-decoration: none; 
             font-weight: bold; 
-            font-size: 1rem; 
             border-radius: 5px; 
-            transition: transform 0.3s, filter 0.3s; 
+            transition: all 0.3s; 
             text-align: center;
             min-width: 160px;
+            text-transform: uppercase;
         }
-        
-        .btn-base:hover { transform: scale(1.05); filter: brightness(1.2); }
+        .btn-base:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
 
-        /* KOLORY PRZYCISKÓW */
         .btn-red { background-color: #ff0000; border: 2px solid #b30000; }
-        .btn-blue { background-color: #007bff; border: 2px solid #0056b3; font-size: 1.2rem; padding: 18px 30px; }
+        .btn-blue { background-color: #007bff; border: 2px solid #0056b3; font-size: 1.3rem; padding: 20px 40px; }
+        .btn-soon { background-color: #007bff; border: 2px solid #0056b3; opacity: 0.7; cursor: not-allowed; font-size: 0.9rem; }
 
-        .rules { background: #0b0c10; padding: 20px; border: 1px solid #45a29e; }
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #45a29e; }
+        .highlight-box { background: rgba(31, 40, 51, 0.5); padding: 25px; border: 1px solid #45a29e; border-radius: 10px; margin-top: 20px; }
+        footer { text-align: center; padding: 50px; font-size: 0.8rem; color: #45a29e; opacity: 0.6; }
     </style>
 </head>
 <body>
@@ -52,49 +42,32 @@
 <div class="container">
     <header>
         <h1>SZACUN <span class="blood">SMP</span></h1>
-        <p>Graj, walcz, przetrwaj. Żyj na krawędzi, zdobywaj szacunek.</p>
+        <p>W świecie rządzonym przez głód potęgi, tylko najsilniejsi piszą historię.</p>
         
         <div class="btn-group">
             <a href="staff.html" class="btn-base btn-red">STAFF</a>
             <a href="https://discord.gg/H7v4BmM3ac" class="btn-base btn-blue">DOŁĄCZ DO RZEZI</a>
             <a href="http://5.252.100.184:25403" class="btn-base btn-red" target="_blank">MAPA SERWERA</a>
-            
-            <a href="#" class="btn-base btn-blue">WKRÓTCE...</a>
-            <a href="#" class="btn-base btn-blue">WKRÓTCE...</a>
         </div>
     </header>
 
     <div class="section">
         <h2>O Rozgrywce</h2>
         <p>Lifesteal na <strong>SZACUN SMP</strong> to nie tylko gra – to brutalna selekcja naturalna. Każde zabójstwo buduje Twoją potęgę, a każdy zgon spycha Cię w niebyt.</p>
-    </div>
-
-    <div class="section">
-        <h2>Kodeks Krwi (Regulamin)</h2>
-        <div class="rules">
-            <p><strong>I. Pakiet Przetrwania:</strong> Twoje serca są walutą.</p>
-            <p><strong>II. Terminologia:</strong> Cheaty to tchórzostwo. Grief jest dozwolony.</p>
-            <p><strong>III. Prawo Silniejszego:</strong> Bierz co chcesz, buduj reputację.</p>
-            <p><strong>IV. Sztuka Wojny:</strong> Każde morderstwo musi mieć powód (RP).</p>
-            <p><strong>V. Wyroki:</strong> Decyzje administracji są ostateczne.</p>
-        </div>
+        <p>Tutaj krew jest jedyną stabilną walutą. Kiedy eliminujesz przeciwnika, wyrywasz mu cząstkę jego istnienia, zwiększając własną pulę żyć. Każde zdobyte serce to kolejny stopień na drodze do dominacji, ale pamiętaj: im wyżej mierzysz, tym brutalniejszy będzie Twój upadek.</p>
+        <p>W świecie kruchych sojuszy i wszechobecnej zdrady, musisz zdecydować: będziesz drapieżnikiem czy zwierzyną? Na <strong>SZACUN SMP</strong> nie ma miejsca na litość – jest tylko wieczny głód potęgi i strach przed ostatnim uderzeniem serca.</p>
     </div>
 
     <div class="section">
         <h2>Ci, którzy stoją u bram (Whitelist)</h2>
         <p>Jeszcze nie udowodnili swojej wartości. Muszą przejść proces rekrutacji, by stać się kimś więcej niż tylko kolejną statystyką w bilansie zgonów.</p>
         
-        <div class="rules">
+        <div class="highlight-box">
             <p><strong>I. STUDIUM KRWI:</strong> Zapoznaj się z kanałem <code>#🩸┇kodeks-krwi</code> na Discordzie.</p>
-            <p><strong>II. PRÓBA FILARÓW:</strong> Otwórz podanie w kategorii <code>FUNDAMENTY KRWI</code>.</p>
+            <p><strong>II. PRÓBA FILARÓW:</strong> Otwórz podanie w kategorii <code>FILARY SZACUNU</code>.</p>
             <p><strong>III. OCZEKIWANIE NA WYROK:</strong> Odpowiedz na pytania bota i czekaj na decyzję Rady (do 48h).</p>
         </div>
     </div>
 
     <footer>
-        &copy; 2025 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
-    </footer>
-</div>
-
-</body>
-</html>
+        &copy; 2025 SZACUN SMP. Pamiętaj,
