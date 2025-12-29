@@ -1,70 +1,74 @@
-/* --- Główne Fundamenty --- */
-:root {
-    --bg-dark: #0b0c10;
-    --bg-accent: #1f2833;
-    --text-main: #c5c6c7;
-    --blood-red: #ff0000;
-    --dark-red: #8b0000;
-    --cyan-accent: #66fcf1;
-    --border-color: #45a29e;
-}
-
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.8;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* --- Nagłówek (Głos Władcy) --- */
-header {
-    text-align: center;
-    padding: 80px 0;
-    border-bottom: 3px solid var(--blood-red);
-    background: linear-gradient(to bottom, #1a0000 0%, var(--bg-dark) 100%);
-}
-
-h1 {
-    color: var(--cyan-accent);
-    font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 8px;
-    margin: 0;
-    text-shadow: 0 0 15px rgba(102, 252, 241, 0.3);
-}
-
-.blood {
-    color: var(--blood-red);
-    text-shadow: 0 0 20px var(--dark-red);
-}
-
-/* --- Sekcje (Manifest Świata) --- */
-.section {
-    padding: 60px 0;
-    border-bottom: 1px solid var(--bg-accent);
-}
-
-h2 {
-    color: var(--cyan-accent);
-    font-size: 2rem;
-    border-left: 6px solid var(--blood-red);
-    padding-left: 20px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
 /* --- Drabina Strachu (Rangi) --- */
 .role {
     background: var(--bg-accent);
     padding: 20px;
     margin: 15px 0;
     border-radius: 8px;
-    display:
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.role:hover {
+    border-color: var(--blood-red);
+    transform: translateX(10px);
+    background: #252e38;
+}
+
+.role-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 25px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* --- Przycisk (Główna Akcja) --- */
+.btn-join {
+    display: inline-block;
+    background: var(--blood-red);
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+    transition: all 0.4s ease;
+    text-align: center;
+    min-width: 200px;
+}
+
+.btn-join:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.6);
+}
+
+/* --- Sekcja przycisków (Flexbox) --- */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* --- RWD (Dostosowanie do telefonów) --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-join {
+        width: 100%;
+        max-width: 300px;
+    }
+}
