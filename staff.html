@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff - SZACUN SMP</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #ff0000;
             --bg-dark: #0f0f12;
-            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-bg: #16171b; /* Ciemniejsze, solidne tło dla lepszego kontrastu */
             --text-main: #ffffff;
             --text-dim: #a0a0a0;
         }
@@ -20,156 +19,134 @@
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
             margin: 0;
-            line-height: 1.6;
+            padding: 0;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
-        /* NAGŁÓWEK */
         header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .btn-back {
             display: inline-block;
             text-decoration: none;
             color: var(--text-dim);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            transition: color 0.3s;
+            font-size: 0.8rem;
+            margin-bottom: 25px;
             border: 1px solid rgba(255,255,255,0.1);
-            padding: 8px 20px;
-            border-radius: 20px;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn-back:hover {
-            color: var(--primary);
             border-color: var(--primary);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
         }
 
-        .small-logo-text {
+        .logo-glow {
             color: var(--primary);
-            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-            font-size: 2.5rem;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+            font-size: 3rem;
             font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 8px;
-            display: block;
+            letter-spacing: 10px;
+            margin: 10px 0;
         }
 
-        .header-accent h1 {
-            font-size: 1.2rem;
-            color: var(--text-dim);
-            letter-spacing: 3px;
-            text-align: center;
-            margin-top: 10px;
-            font-weight: 400;
-        }
-
-        /* SIATKA KART */
+        /* SIATKA */
         .staff-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
-            margin-top: 40px;
         }
 
+        /* KARTA */
         .member-card {
             background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 30px;
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            border-radius: 16px;
+            padding: 35px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            position: relative;
         }
 
         .member-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-8px);
+            border-color: rgba(255,255,255,0.15);
         }
 
-        .member-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-        }
-
-        /* STATUS DOT */
-        .status-header {
+        /* NAPRAWA WIDOCZNOŚCI RANGI */
+        .rank-badge {
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .rank-label {
+            padding: 5px 15px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff !important; /* Wymuszenie białego koloru tekstu */
         }
 
         .status-dot {
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.4; }
-            100% { opacity: 1; }
-        }
-
-        /* TYPOGRAFIA KART */
-        .rank-title {
-            font-size: 0.75rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 0;
+            background: #fff;
         }
 
         .member-name {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: 700;
-            margin: 10px 0;
-            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.3;
         }
 
         .description {
             color: var(--text-dim);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             line-height: 1.6;
         }
 
-        /* KOLORY RANG */
-        .rank-owner { border-left-color: #ff0000; }
-        .rank-owner .rank-title, .rank-owner .status-dot { color: #ff0000; background-color: #ff0000; }
-        
-        .rank-admin { border-left-color: #007bff; }
-        .rank-admin .rank-title, .rank-admin .status-dot { color: #007bff; background-color: #007bff; }
+        /* KOLORYSTYKA */
+        .owner .rank-label { background: #ff0000; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
+        .owner .status-dot { background: #ff0000; box-shadow: 0 0 8px #ff0000; }
+        .owner { border-left: 4px solid #ff0000; }
 
-        .rank-mod { border-left-color: #6f42c1; }
-        .rank-mod .rank-title, .rank-mod .status-dot { color: #6f42c1; background-color: #6f42c1; }
+        .admin .rank-label { background: #007bff; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); }
+        .admin .status-dot { background: #007bff; box-shadow: 0 0 8px #007bff; }
+        .admin { border-left: 4px solid #007bff; }
 
-        .rank-sponsor { border-left-color: #ffc107; }
-        .rank-sponsor .rank-title, .rank-sponsor .status-dot { color: #ffc107; background-color: #ffc107; }
+        .mod .rank-label { background: #6f42c1; box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3); }
+        .mod .status-dot { background: #6f42c1; box-shadow: 0 0 8px #6f42c1; }
+        .mod { border-left: 4px solid #6f42c1; }
+
+        .sponsor .rank-label { background: #ffc107; color: #000 !important; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3); }
+        .sponsor .status-dot { background: #ffc107; }
+        .sponsor { border-left: 4px solid #ffc107; }
 
         footer {
-            margin-top: 80px;
             text-align: center;
-            color: var(--text-dim);
+            margin-top: 80px;
+            padding: 40px;
+            opacity: 0.4;
             font-size: 0.8rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 30px;
         }
     </style>
 </head>
@@ -177,53 +154,51 @@
 
 <div class="container">
     <header>
-        <a href="index.html" class="btn-back">← POWRÓT DO STRONY GŁÓWNEJ</a>
-        <span class="small-logo-text">SZACUN SMP</span>
-        <div class="header-accent">
-            <h1>ZESPÓŁ I ZARZĄD SERWERA</h1>
-        </div>
+        <a href="index.html" class="btn-back">← POWRÓT</a>
+        <div class="logo-glow">SZACUN SMP</div>
+        <p style="color: var(--text-dim); letter-spacing: 2px;">ADMINISTRACJA SERWERA</p>
     </header>
 
     <div class="staff-grid">
-        <div class="member-card rank-owner">
-            <div class="status-header">
+        <div class="member-card owner">
+            <div class="rank-badge">
                 <div class="status-dot"></div>
-                <p class="rank-title">Właściciele</p>
+                <span class="rank-label">Właściciel</span>
             </div>
             <div class="member-name">pokadigleta, sp0cona_len1q & dlugapanda69</div>
-            <div class="description">Wizjonerzy i Fundament Projektu. Dbają o ogólny rozwój i utrzymanie serwera.</div>
+            <div class="description">Główni zarządcy i założyciele projektu. Odpowiadają za stabilność i wizję serwera.</div>
         </div>
 
-        <div class="member-card rank-admin">
-            <div class="status-header">
+        <div class="member-card admin">
+            <div class="rank-badge">
                 <div class="status-dot"></div>
-                <p class="rank-title">Administrator</p>
+                <span class="rank-label">Administrator</span>
             </div>
             <div class="member-name">kalinekmail</div>
-            <div class="description">Zarządza kluczowymi procesami serwera. Główny Weryfikator i Strażnik Dostępu Whitelist.</div>
+            <div class="description">Zarządza procesami technicznymi i whitelistą. Prawa ręka właścicieli.</div>
         </div>
 
-        <div class="member-card rank-mod">
-            <div class="status-header">
+        <div class="member-card mod">
+            <div class="rank-badge">
                 <div class="status-dot"></div>
-                <p class="rank-title">Moderator</p>
+                <span class="rank-label">Moderator</span>
             </div>
             <div class="member-name">sz4cun</div>
-            <div class="description">Pilnuje porządku na serwerze i Discordzie. Rozwiązuje bieżące konflikty między graczami.</div>
+            <div class="description">Strażnik porządku. Pilnuje przestrzegania regulaminu na serwerze i Discordzie.</div>
         </div>
 
-        <div class="member-card rank-sponsor">
-            <div class="status-header">
+        <div class="member-card sponsor">
+            <div class="rank-badge">
                 <div class="status-dot"></div>
-                <p class="rank-title">Sponsor</p>
+                <span class="rank-label">Sponsor</span>
             </div>
             <div class="member-name">tycha1515</div>
-            <div class="description">Zasłużeni sojusznicy wspierający rozwój SZACUN SMP. Cieszą się specjalnymi przywilejami.</div>
+            <div class="description">Osoby wspierające finansowo rozwój serwera, zapewniające jego trwanie.</div>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 SZACUN SMP. Wszystkie prawa zastrzeżone.
+        &copy; 2026 SZACUN SMP. Projekt stworzony z pasją.
     </footer>
 </div>
 
