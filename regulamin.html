@@ -6,22 +6,20 @@
     <title>Regulamin - SZACUN SMP</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Gruba i mocno podświetlona na czerwono nazwa SZACUN SMP */
-        .small-logo-text {
+        /* Spójny logotyp z resztą stron */
+        .logo-text {
             color: #ff0000 !important;
-            text-shadow: 
-                0 0 10px rgba(255, 0, 0, 0.9), 
-                0 0 25px rgba(255, 0, 0, 0.8), 
-                0 0 45px rgba(255, 0, 0, 0.6) !important;
-            font-size: 2.2rem;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4) !important;
+            font-size: 3rem;
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 6px;
+            letter-spacing: 10px;
             display: block;
-            margin-bottom: 10px;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
-        /* Czerwona kreska przy nagłówku */
+        /* Akcenty nagłówków (Kreska z lewej) */
         .header-accent {
             border-left: 5px solid #ff0000;
             padding-left: 15px;
@@ -37,33 +35,40 @@
             letter-spacing: 2px;
         }
 
-        /* Boksy z białą treścią i czerwoną kreską */
+        /* Boksy z zasadami w stylu Staff/Głównej */
         .rule-box {
             background: #0b0c10;
-            border: 1px solid rgba(255, 0, 0, 0.2);
-            border-left: 6px solid #ff0000;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 4px;
             padding: 25px;
             margin-bottom: 20px;
-            border-radius: 4px;
+            border-left: 6px solid #ff0000; 
+            box-shadow: inset 5px 0 10px -5px rgba(255, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Nazwy sekcji - białe */
+        .rule-box:hover {
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
+
         .rule-box h3 {
             color: #ffffff !important;
             text-transform: uppercase;
             margin-top: 0;
             font-size: 1.2rem;
             letter-spacing: 1px;
+            margin-bottom: 15px;
         }
 
-        /* Treść zasad - biała */
         .rule-box p, .rule-box li {
-            color: #ffffff !important;
+            color: #c5c6c7;
             line-height: 1.6;
             font-size: 0.95rem;
         }
 
-        /* Czerwone numery w listach */
+        /* Specjalne formatowanie list kar */
         .punishment-list {
             list-style: none;
             padding: 0;
@@ -71,49 +76,86 @@
 
         .punishment-list li {
             margin-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
         }
 
         .punishment-list b { 
             color: #ff0000 !important; 
             margin-right: 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
         }
 
-        /* Wyróżniony punkt V - Gniew Władcy Cieni */
+        /* Sekcja V - GNIEW WŁADCY CIENI */
         .wrath-section {
             border: 2px solid #ff0000;
             background: rgba(255, 0, 0, 0.05);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+            border-left: 6px solid #ff0000;
         }
 
         .wrath-section h3 {
             color: #ff0000 !important;
-            text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            font-weight: 900;
         }
 
         /* Przycisk akceptacji */
+        .blood-btn-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+
         .blood-btn {
             background: #ff0000;
             color: white;
-            padding: 18px 50px;
+            padding: 20px 60px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 900;
             display: inline-block;
             border-radius: 4px;
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
             text-transform: uppercase;
+            letter-spacing: 2px;
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .blood-btn:hover {
-            box-shadow: 0 0 40px rgba(255, 0, 0, 0.7);
-            transform: scale(1.05);
+            box-shadow: 0 0 45px rgba(255, 0, 0, 0.8);
+            transform: scale(1.05) translateY(-3px);
+            background: #ff1a1a;
+        }
+
+        .btn-back {
+            display: inline-block;
+            text-decoration: none;
+            color: #ff0000;
+            border: 1px solid #ff0000;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .btn-back:hover {
+            background: #ff0000;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
         }
 
         footer { 
-            margin-top: 60px; 
+            margin-top: 80px; 
             border-top: 1px solid rgba(255, 0, 0, 0.1); 
-            padding-top: 20px; 
-            color: #c5c6c7;
+            padding: 30px 0; 
+            text-align: center;
+            color: #454545;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -122,62 +164,57 @@
 <div class="container">
     <header>
         <a href="index.html" class="btn-back">← POWRÓT DO BRAM</a>
-        <br><br>
-        <span class="small-logo-text">SZACUN SMP</span>
+        <span class="logo-text">SZACUN SMP</span>
     </header>
 
     <div class="header-accent">
         <h1>KODEKS KRWI (REGULAMIN)</h1>
     </div>
 
-    <div class="section">
-        <p style="color: #ffffff; margin-bottom: 30px; font-style: italic; opacity: 0.8;">
-            Nieznajomość poniższych praw nie zwalnia z ich przestrzegania. Wkraczasz do świata, gdzie każde słowo ma znaczenie.
-        </p>
+    <p style="color: #ffffff; margin-bottom: 30px; font-style: italic; opacity: 0.8; text-align: center;">
+        "Nieznajomość poniższych praw nie zwalnia z ich przestrzegania. Wkraczasz do świata, gdzie każde słowo ma znaczenie."
+    </p>
 
-        <div class="rule-box">
-            <h3>I. Postanowienia Ogólne</h3>
-            <p>Wchodząc na serwer, akceptujesz zasady Lifesteal. Twoje serca są Twoim życiem – tracąc wszystkie, zostajesz wyeliminowany, chyba że zostaniesz wskrzeszony przez sojuszników.</p>
-        </div>
+    <div class="rule-box">
+        <h3>I. Postanowienia Ogólne</h3>
+        <p>Wchodząc na serwer, akceptujesz zasady Lifesteal. Twoje serca są Twoim życiem – tracąc wszystkie, zostajesz wyeliminowany (Ban), chyba że zostaniesz wskrzeszony przez sojuszników za pomocą specjalnego przedmiotu.</p>
+    </div>
 
-        <div class="rule-box">
-            <h3>II. Zakazy Bezwzględne</h3>
-            <p>Używanie cheatów, modyfikacji dających przewagę (X-Ray, KillAura, Fly), wykorzystywanie błędów gry oraz reklamowanie innych serwerów skutkuje natychmiastową banicją bez możliwości apelacji.</p>
-        </div>
+    <div class="rule-box">
+        <h3>II. Zakazy Bezwzględne</h3>
+        <p>Używanie cheatów, modyfikacji dających nieuczciwą przewagę (X-Ray, KillAura, Fly), wykorzystywanie błędów gry (bug-using) oraz reklamowanie innych serwerów skutkuje natychmiastową banicją bez możliwości apelacji.</p>
+    </div>
 
-        <div class="rule-box">
-            <h3>III. Wojna i Grabież</h3>
-            <p>Griefowanie baz, kradzieże oraz PvP są dozwolone i stanowią fundament rozgrywki. Administracja nie oddaje przedmiotów straconych w wyniku najazdu lub walki.</p>
-        </div>
+    <div class="rule-box">
+        <h3>III. Wojna i Grabież</h3>
+        <p>Griefowanie baz, kradzieże oraz PvP są w pełni dozwolone i stanowią fundament rozgrywki. Administracja nie interweniuje w konflikty między graczami i nie zwraca przedmiotów straconych w wyniku najazdu lub walki.</p>
     </div>
 
     <div class="header-accent">
         <h1>WYROKI I KARY</h1>
     </div>
 
-    <div class="section">
-        <div class="rule-box">
-            <h3>IV. Hierarchia Kar</h3>
-            <ul class="punishment-list">
-                <li><b>1. Ostrzeżenie:</b> Żółta karta za mniejsze przewinienia.</li>
-                <li><b>2. Wyciszenie (Mute):</b> Za toksyczność lub spam na czacie.</li>
-                <li><b>3. Więzienie:</b> Czasowe unieruchomienie gracza.</li>
-                <li><b>4. Wygnanie (Ban):</b> Czasowe lub stałe usunięcie z królestwa.</li>
-            </ul>
-        </div>
-
-        <div class="rule-box wrath-section">
-            <h3>V. GNIEW WŁADCY CIENI</h3>
-            <p>Gdy do akcji musi wkroczyć sam Właściciel, nie oczekuj litości. To koniec Twojej drogi tutaj, bez prawa do apelacji i bez drugiej szansy.</p>
-        </div>
+    <div class="rule-box">
+        <h3>IV. Hierarchia Kar</h3>
+        <ul class="punishment-list">
+            <li><b>Ostrzeżenie:</b> Żółta karta za mniejsze przewinienia lub spam.</li>
+            <li><b>Wyciszenie (Mute):</b> Za nadmierną toksyczność, rasizm lub obrażanie rodzin innych graczy.</li>
+            <li><b>Więzienie:</b> Czasowe odizolowanie gracza od świata gry.</li>
+            <li><b>Wygnanie (Ban):</b> Czasowe lub stałe usunięcie z serwera za poważne złamanie regulaminu.</li>
+        </ul>
     </div>
 
-    <div style="text-align: center; margin-top: 40px; border: none;" class="section">
+    <div class="rule-box wrath-section">
+        <h3>V. GNIEW WŁADCY CIENI</h3>
+        <p>Gdy do akcji musi wkroczyć sam Właściciel, nie oczekuj litości. Działanie na szkodę serwera, próby włamań lub niszczenie społeczności kończy Twoją drogę tutaj raz na zawsze. Bez prawa do apelacji.</p>
+    </div>
+
+    <div class="blood-btn-container">
         <a href="https://discord.gg/89vuMgeRVk" class="blood-btn">PODPISUJĘ CYROGRAF</a>
     </div>
 
     <footer>
-        &copy; 2025 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
+        &copy; 2026 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
     </footer>
 </div>
 
