@@ -4,158 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regulamin - SZACUN SMP</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-        /* Spójny logotyp z resztą stron */
-        .logo-text {
-            color: #ff0000 !important;
-            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4) !important;
-            font-size: 3rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 10px;
-            display: block;
+        :root {
+            --bg-color: #0d0d0f;
+            --card-bg: #16161a;
+            --red-glow: #ff0000;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* NAGŁÓWEK - STYL Z TWOICH ZDJĘĆ */
+        header {
             text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .btn-back-pill {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 35px;
+            border-radius: 50px; /* Zaokrąglony kształt pigułki */
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 30px;
         }
 
-        /* Akcenty nagłówków (Kreska z lewej) */
+        .btn-back-pill:hover {
+            border-color: var(--red-glow);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+        }
+
+        .logo-glow {
+            color: var(--red-glow);
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4);
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 900;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            margin: 0;
+            display: block;
+        }
+
+        /* STYLIZACJA TREŚCI REGULAMINU */
         .header-accent {
-            border-left: 5px solid #ff0000;
+            border-left: 5px solid var(--red-glow);
             padding-left: 15px;
             margin: 40px 0 25px 0;
-            box-shadow: -10px 0 15px -10px rgba(255, 0, 0, 0.5);
         }
 
         .header-accent h1 {
-            color: #ffffff;
             font-size: 1.8rem;
-            margin: 0;
             text-transform: uppercase;
             letter-spacing: 2px;
+            margin: 0;
         }
 
-        /* Boksy z zasadami w stylu Staff/Głównej */
         .rule-box {
-            background: #0b0c10;
-            border: 1px solid rgba(255, 0, 0, 0.3);
-            border-radius: 4px;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-left: 5px solid var(--red-glow);
             padding: 25px;
             margin-bottom: 20px;
-            border-left: 6px solid #ff0000; 
-            box-shadow: inset 5px 0 10px -5px rgba(255, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .rule-box:hover {
-            transform: translateX(5px);
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
-            border-color: #ff0000;
+            border-radius: 4px;
         }
 
         .rule-box h3 {
-            color: #ffffff !important;
-            text-transform: uppercase;
-            margin-top: 0;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-
-        .rule-box p, .rule-box li {
-            color: #c5c6c7;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        /* Specjalne formatowanie list kar */
-        .punishment-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .punishment-list li {
-            margin-bottom: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding-bottom: 8px;
-        }
-
-        .punishment-list b { 
-            color: #ff0000 !important; 
-            margin-right: 10px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-        }
-
-        /* Sekcja V - GNIEW WŁADCY CIENI */
-        .wrath-section {
-            border: 2px solid #ff0000;
-            background: rgba(255, 0, 0, 0.05);
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
-            border-left: 6px solid #ff0000;
-        }
-
-        .wrath-section h3 {
-            color: #ff0000 !important;
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-            font-weight: 900;
-        }
-
-        /* Przycisk akceptacji */
-        .blood-btn-container {
-            text-align: center;
-            margin: 50px 0;
-        }
-
-        .blood-btn {
-            background: #ff0000;
-            color: white;
-            padding: 20px 60px;
-            text-decoration: none;
-            font-weight: 900;
-            display: inline-block;
-            border-radius: 4px;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .blood-btn:hover {
-            box-shadow: 0 0 45px rgba(255, 0, 0, 0.8);
-            transform: scale(1.05) translateY(-3px);
-            background: #ff1a1a;
-        }
-
-        .btn-back {
-            display: inline-block;
-            text-decoration: none;
-            color: #ff0000;
-            border: 1px solid #ff0000;
-            padding: 8px 20px;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: 0.3s;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-        }
-
-        .btn-back:hover {
-            background: #ff0000;
             color: #fff;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 1.1rem;
         }
 
-        footer { 
-            margin-top: 80px; 
-            border-top: 1px solid rgba(255, 0, 0, 0.1); 
-            padding: 30px 0; 
+        .rule-box p {
+            color: var(--text-dim);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* SPECJALNA SEKCJA - GNIEW WŁADCY */
+        .wrath-box {
+            border: 2px solid var(--red-glow);
+            background: rgba(255, 0, 0, 0.05);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+        }
+
+        .wrath-box h3 {
+            color: var(--red-glow);
+        }
+
+        footer {
             text-align: center;
-            color: #454545;
+            margin-top: 60px;
+            padding: 40px;
+            color: #333;
             font-size: 0.8rem;
+            letter-spacing: 2px;
         }
     </style>
 </head>
@@ -163,58 +129,36 @@
 
 <div class="container">
     <header>
-        <a href="index.html" class="btn-back">← POWRÓT DO BRAM</a>
-        <span class="logo-text">SZACUN SMP</span>
+        <a href="index.html" class="btn-back-pill">← POWRÓT DO BRAM</a>
+        <span class="logo-glow">SZACUN SMP</span>
     </header>
 
     <div class="header-accent">
         <h1>KODEKS KRWI (REGULAMIN)</h1>
     </div>
 
-    <p style="color: #ffffff; margin-bottom: 30px; font-style: italic; opacity: 0.8; text-align: center;">
-        "Nieznajomość poniższych praw nie zwalnia z ich przestrzegania. Wkraczasz do świata, gdzie każde słowo ma znaczenie."
-    </p>
-
     <div class="rule-box">
         <h3>I. Postanowienia Ogólne</h3>
-        <p>Wchodząc na serwer, akceptujesz zasady Lifesteal. Twoje serca są Twoim życiem – tracąc wszystkie, zostajesz wyeliminowany (Ban), chyba że zostaniesz wskrzeszony przez sojuszników za pomocą specjalnego przedmiotu.</p>
+        <p>Wchodząc na serwer, akceptujesz zasady Lifesteal. Twoje serca są Twoim życiem – tracąc wszystkie, zostajesz wyeliminowany, chyba że zostaniesz wskrzeszony przez sojuszników.</p>
     </div>
 
     <div class="rule-box">
         <h3>II. Zakazy Bezwzględne</h3>
-        <p>Używanie cheatów, modyfikacji dających nieuczciwą przewagę (X-Ray, KillAura, Fly), wykorzystywanie błędów gry (bug-using) oraz reklamowanie innych serwerów skutkuje natychmiastową banicją bez możliwości apelacji.</p>
+        <p>Używanie cheatów, modyfikacji dających przewagę (X-Ray, KillAura, Fly) oraz wykorzystywanie krytycznych błędów gry skutkuje natychmiastową banicją bez możliwości apelacji.</p>
     </div>
 
     <div class="rule-box">
         <h3>III. Wojna i Grabież</h3>
-        <p>Griefowanie baz, kradzieże oraz PvP są w pełni dozwolone i stanowią fundament rozgrywki. Administracja nie interweniuje w konflikty między graczami i nie zwraca przedmiotów straconych w wyniku najazdu lub walki.</p>
+        <p>Griefowanie baz, kradzieże oraz PvP są dozwolone i stanowią fundament rozgrywki. Administracja nie oddaje przedmiotów straconych w wyniku najazdu.</p>
     </div>
 
-    <div class="header-accent">
-        <h1>WYROKI I KARY</h1>
-    </div>
-
-    <div class="rule-box">
-        <h3>IV. Hierarchia Kar</h3>
-        <ul class="punishment-list">
-            <li><b>Ostrzeżenie:</b> Żółta karta za mniejsze przewinienia lub spam.</li>
-            <li><b>Wyciszenie (Mute):</b> Za nadmierną toksyczność, rasizm lub obrażanie rodzin innych graczy.</li>
-            <li><b>Więzienie:</b> Czasowe odizolowanie gracza od świata gry.</li>
-            <li><b>Wygnanie (Ban):</b> Czasowe lub stałe usunięcie z serwera za poważne złamanie regulaminu.</li>
-        </ul>
-    </div>
-
-    <div class="rule-box wrath-section">
-        <h3>V. GNIEW WŁADCY CIENI</h3>
-        <p>Gdy do akcji musi wkroczyć sam Właściciel, nie oczekuj litości. Działanie na szkodę serwera, próby włamań lub niszczenie społeczności kończy Twoją drogę tutaj raz na zawsze. Bez prawa do apelacji.</p>
-    </div>
-
-    <div class="blood-btn-container">
-        <a href="https://discord.gg/89vuMgeRVk" class="blood-btn">PODPISUJĘ CYROGRAF</a>
+    <div class="rule-box wrath-box">
+        <h3>IV. GNIEW WŁADCY CIENI</h3>
+        <p>Działanie na szkodę serwera, toksyczność ostateczna lub próby oszustw administracji kończą się permanentnym wygnaniem. Tu nie ma drugiej szansy.</p>
     </div>
 
     <footer>
-        &copy; 2026 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
+        &copy; 2026 SZACUN SMP. PAMIĘTAJ, KOMU WINIEN JESTEŚ LOJALNOŚĆ.
     </footer>
 </div>
 
